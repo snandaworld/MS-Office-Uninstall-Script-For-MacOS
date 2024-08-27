@@ -36,14 +36,14 @@ if [[ $keep_outlook_data == "yes" ]]; then
 else
     echo "Outlook data will be removed."
 fi
-    echo -e "
-    ------------- WARNING -------------
-      Your Outlook data will be wiped.
-     Press CTRL+C in 5 seconds to ABORT
-    -----------------------------------
-    "
+    # echo -e "
+    #------------- WARNING -------------
+    #  Your Outlook data will be wiped.
+    # Press CTRL+C in 5 seconds to ABORT
+    #-----------------------------------
+    #"
 
-    sleep 6
+    #sleep 6
 
     # commands out of the official guide from microsoft
     # source https://support.office.com/en-us/article/Uninstall-Office-2016-for-Mac-eefa1199-5b58-43af-8a3d-b73dc1a8cae3
