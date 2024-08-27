@@ -17,7 +17,25 @@ else
     "
 
     sleep 4
+    # Warning about Outlook data
+echo "Warning: This script will uninstall Office 365 for Mac."
+echo "Do you want to keep your Outlook data? (yes/no)"
+read keep_outlook_data
 
+# Define the common folder path
+common_folder="/Users/Shared/OutlookDataBackup"
+
+if [[ $keep_outlook_data == "yes" ]]; then
+    # Create the common folder if it doesn't exist
+    mkdir -p "$common_folder"
+    
+    # Copy Outlook data to the common folder
+    cp -R ~/Library/Group\ Containers/UBF8T346G9.Office/Outlook "$common_folder"
+    
+    echo "Outlook data has been copied to $common_folder"
+else
+    echo "Outlook data will be removed."
+fi
     echo -e "
     ------------- WARNING -------------
       Your Outlook data will be wiped.
