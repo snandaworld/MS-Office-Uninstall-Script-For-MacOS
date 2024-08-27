@@ -21,6 +21,7 @@ else
 echo "Warning: This script will uninstall Office 365 for Mac."
 echo "Do you want to keep your Outlook data? (yes/no)"
 read keep_outlook_data
+sleep 6
 
 # Define the common folder path
 common_folder="/Users/Shared/OutlookDataBackup"
