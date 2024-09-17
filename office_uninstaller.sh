@@ -1,6 +1,8 @@
 #!/bin/bash
 
 USERNAME=$(ls -l /dev/console | awk '{print $3}')
+BACKUPPATH="~/Documents/Outlook_Backup"
+SOURCEPATH="~/Library/Group\ Containers/UBF8T346G9.Office/Outlook/"
 
 if [[ $EUID -ne 0 ]]; then
     echo -e "
@@ -18,14 +20,21 @@ else
 
     sleep 4
 
-    echo -e "
-    ------------- WARNING -------------
-      Your Outlook data will be wiped.
-     Press CTRL+C in 5 seconds to ABORT
-    -----------------------------------
-    "
+    # Prompt the user for data backup
+    read -p "Do you want to backup Outlook data? (yes/no): " user_choice
 
-    sleep 6
+    if [[ "$user_choice" == "yes" ]]; then
+        echo "Backup initiated..."
+        # Create the backup directory (if not already present)
+        mkdir -p $BACKUPPATH
+ 
+        # Backup Outlook data
+        cp -r $SOURCEPATH $BACKUPPATH/OutlookData
+
+        echo "Outlook data backup completed."
+    else
+        echo "Outlook data backup skipped."
+    fi
 
     # commands out of the official guide from microsoft
     # source https://support.office.com/en-us/article/Uninstall-Office-2016-for-Mac-eefa1199-5b58-43af-8a3d-b73dc1a8cae3
