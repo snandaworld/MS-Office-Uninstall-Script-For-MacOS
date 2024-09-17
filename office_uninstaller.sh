@@ -24,7 +24,7 @@ else
     No: 0"
     read user_choice
 
-    if [ "$user_choice" -ne 0 ]; then
+    if [[ "$user_choice" -ne 0 ]]; then
         echo "Backup initiated..."
         # Create the backup directory (if not already present)
         mkdir -p $BACKUPPATH
