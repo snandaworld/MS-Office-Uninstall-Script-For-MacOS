@@ -1,5 +1,5 @@
 #!/bin/bash
-
+bash
 USERNAME=$(ls -l /dev/console | awk '{print $3}')
 BACKUPPATH="~/Documents/Outlook_Backup"
 SOURCEPATH="~/Library/Group\ Containers/UBF8T346G9.Office/Outlook/"
