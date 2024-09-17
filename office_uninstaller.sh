@@ -18,8 +18,6 @@ else
     ###################################
     "
 
-    sleep 4
-
     # Prompt the user for data backup
     read -p "Do you want to backup Outlook data? (yes/no): " user_choice
 
