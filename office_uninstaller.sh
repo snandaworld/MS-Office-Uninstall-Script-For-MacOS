@@ -16,15 +16,6 @@ else
       Office 365 for Mac uninstaller
     ###################################
     "
-
-    # Prompt the user for data backup
-    echo -e "
-    Do you want to backup Outlook data?
-    Yes: 1
-    No: 0"
-    read user_choice
-
-    if [[ "$user_choice" -ne 0 ]]; then
         echo "Backup initiated..."
         # Create the backup directory (if not already present)
         mkdir -p $BACKUPPATH
@@ -33,9 +24,6 @@ else
         cp -r $SOURCEPATH $BACKUPPATH/OutlookData
 
         echo "Outlook data backup completed."
-    else
-        echo "Outlook data backup skipped."
-    fi
 
     # commands out of the official guide from microsoft
     # source https://support.office.com/en-us/article/Uninstall-Office-2016-for-Mac-eefa1199-5b58-43af-8a3d-b73dc1a8cae3
