@@ -21,7 +21,7 @@ else
     echo "Do you want to backup Outlook data? (yes/no): "
     read user_choice
 
-    if [ "$user_choice" == "yes" ]; then
+    if [ "$user_choice" -eq "yes" ]; then
         echo "Backup initiated..."
         # Create the backup directory (if not already present)
         mkdir -p $BACKUPPATH
