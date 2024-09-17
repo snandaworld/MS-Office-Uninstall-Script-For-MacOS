@@ -1,5 +1,4 @@
 #!/bin/bash
-bash
 USERNAME=$(ls -l /dev/console | awk '{print $3}')
 BACKUPPATH="~/Documents/Outlook_Backup"
 SOURCEPATH="~/Library/Group\ Containers/UBF8T346G9.Office/Outlook/"
@@ -19,7 +18,7 @@ else
     "
 
     # Prompt the user for data backup
-    read -p "Do you want to backup Outlook data? (yes/no): " user_choice
+    read "Do you want to backup Outlook data? (yes/no): " user_choice
 
     if [[ "$user_choice" == "yes" ]]; then
         echo "Backup initiated..."
