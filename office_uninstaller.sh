@@ -21,7 +21,7 @@ else
         mkdir -p $BACKUPPATH
  
         # Backup Outlook data
-        cp -r $SOURCEPATH $BACKUPPATH/OutlookData
+        cp -r $SOURCEPATH $BACKUPPATH
 
         echo "Outlook data backup completed."
 
