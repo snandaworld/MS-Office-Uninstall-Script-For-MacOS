@@ -20,7 +20,7 @@ else
         echo "Backup from $SOURCEPATH"
         echo "Backup to $BACKUPPATH"
         # Create the backup directory (if not already present)
-        mkdir -p $BACKUPPATH
+        mkdir $BACKUPPATH
  
         # Backup Outlook data
         cp -R /Users/$USERNAME/Library/Group\ Containers/UBF8T346G9.Office/Outlook/ $BACKUPPATH
