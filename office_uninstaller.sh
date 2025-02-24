@@ -22,7 +22,7 @@ else
         mkdir -p $BACKUPPATH
  
         # Backup Outlook data
-        cp -r $SOURCEPATH $BACKUPPATH
+        cp -r /Users/$USERNAME/Library/Group\ Containers/UBF8T346G9.Office/Outlook/ $BACKUPPATH
 
         echo "Outlook data backup completed."
 
