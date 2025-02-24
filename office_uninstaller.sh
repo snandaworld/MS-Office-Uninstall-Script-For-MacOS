@@ -1,7 +1,7 @@
 #!/bin/zsh
 USERNAME=$(ls -l /dev/console | awk '{print $3}')
 BACKUPPATH="~/Documents/Outlook_Backup"
-SOURCEPATH="/Users/$USERNAME/Library/Group Containers/UBF8T346G9.Office/Outlook/"
+SOURCEPATH=/Users/$USERNAME/Library/Group\ Containers/UBF8T346G9.Office/Outlook/
 
 if [[ $EUID -ne 0 ]]; then
     echo -e "
@@ -17,6 +17,7 @@ else
     ###################################
     "
         echo "Backup initiated..."
+        echo "Backup from $SOURCEPATH"
         # Create the backup directory (if not already present)
         mkdir -p $BACKUPPATH
  
