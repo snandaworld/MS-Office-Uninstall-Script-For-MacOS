@@ -5,7 +5,7 @@ SOURCEPATH="~/Library/Group Containers/UBF8T346G9.Office/Outlook/"
 
 if [[ $EUID -ne 0 ]]; then
     echo -e "
-    ROOT PRIVILEDGES NEEDED!
+    ROOT PRIVILEAGES NEEDED!
     You have to run this script as root.
     Aborting...
     "
