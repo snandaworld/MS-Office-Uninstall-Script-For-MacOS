@@ -18,6 +18,7 @@ else
     "
         echo "Backup initiated..."
         echo "Backup from $SOURCEPATH"
+        echo "Backup to $BACKUPPATH"
         # Create the backup directory (if not already present)
         mkdir -p $BACKUPPATH
  
